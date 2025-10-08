@@ -7,7 +7,7 @@ const Software = () => {
 
 
     <div className="">
-      {/* <div className=" w-full lg:min-h-[470px]  py-16 lg:px-12 px-10    border-b-2 border-dashed border-[#D6D6D6] flex flex-col justify-end ">
+      <div className=" w-full lg:min-h-[470px]  py-16 lg:px-12 px-10    border-b-2 border-dashed border-[#D6D6D6] flex flex-col justify-end ">
         <div className="flex lg:flex-row flex-col justify-between " >
           <div className="h-full space-y-3 lg:w-[50%] w-full">
             <h6 className="font-extralight text-[38px]">
@@ -43,7 +43,7 @@ const Software = () => {
           <span className="text-[16px] text-[#222222]">REQUEST QUOTE</span>
         </div>
 
-      </div> */}
+      </div>
 
       {/* Screenshots */}
       <div className="lg:p-12 p-8 pb-18 border-b-2 border-dashed border-[#D6D6D6] lg:space-y-16 space-y-10">
