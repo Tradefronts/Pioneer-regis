@@ -3,7 +3,7 @@ type ButtonProps={
 name:string, bgColor:string, textColor:string, border:string,isShow?:string
 }
 
-const Button = ({ name, bgColor, textColor, border,isShow=""}) => {
+const Button = ({ name, bgColor, textColor, border,isShow=""}:ButtonProps) => {
     return (
         <div
         style={{ backgroundColor:bgColor,

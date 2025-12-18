@@ -1,6 +1,5 @@
 import Button from "@/components/Button";
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
 import images from "../../config/images";
 import Image from "next/image";
 
