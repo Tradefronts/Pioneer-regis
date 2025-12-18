@@ -1,15 +1,9 @@
 import React from 'react'
-
 type ButtonProps={
-    name:string,
-    bgColor:string,
-    textColor:string,
-    border:string,
-    isShow:string
+name:string, bgColor:string, textColor:string, border:string,isShow?:string
 }
 
-
-const Button = ({ name, bgColor, textColor, border, isShow = "" }: ButtonProps) => {
+const Button = ({ name, bgColor, textColor, border,isShow=""}) => {
     return (
         <div
         style={{ backgroundColor:bgColor,
