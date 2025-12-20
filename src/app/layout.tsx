@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="xl:px-26 md:px-16 px-4">
-        <div className="border-dashed border-x-2 border-[#D6D6D6] ">
+      <body className={`${dmSans.variable} xl:px-26 md:px-16 px-4`}>
+        <div
+          className="border-x border-transparent"
+          style={{
+            borderImage: `repeating-linear-gradient(
+      to bottom,
+      #D6D6D6 0 6px,
+      transparent 6px 14px
+    ) 1`,
+          }}
+        >
           <Navbar />
           {children}
         </div>

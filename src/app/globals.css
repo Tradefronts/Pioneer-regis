@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-dm-sans: var(--font-dm-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,18 +26,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background: linear-gradient(190deg,
-  #F1F1F1 0%,
-  #aca9fc59 40%,
-  #F1F1F1 50%,
-  #aca9fc59 100%
+  background: linear-gradient(
+    190deg,
+    #f1f1f1 0%,
+    #aca9fc59 40%,
+    #f1f1f1 50%,
+    #aca9fc59 100%
   );
 }
 
 body {
-  background: linear-gradient(190deg,
-      #F1F1F1 0%,
-      #aca9fc59 40%,
-      #F1F1F1 50%,
-      #aca9fc68 100%);
+  background: linear-gradient(
+    190deg,
+    #f1f1f1 0%,
+    #aca9fc59 40%,
+    #f1f1f1 50%,
+    #aca9fc68 100%
+  );
 }

@@ -6,13 +6,22 @@ import Image from "next/image";
 const Software = () => {
   return (
     <div className="">
-      <div className=" w-full lg:min-h-[470px]  py-16 lg:px-12 px-10    border-b-2 border-dashed border-[#D6D6D6] flex flex-col justify-end ">
+      <div
+        className=" w-full lg:min-h-[470px]  py-16 lg:px-12 px-10 flex flex-col justify-end  border-b border-transparent"
+        style={{
+          borderImage: `repeating-linear-gradient(
+      to right,
+      #D6D6D6 0 8px,
+      transparent 8px 20px
+    ) 1`,
+        }}
+      >
         <div className="flex lg:flex-row flex-col justify-between ">
           <div className="h-full space-y-3 lg:w-[50%] w-full">
-            <h6 className="font-extralight lg:text-[38px] text-xl">
-              Pioneer® Connected Accounts™
-            </h6>
-            <p className="text-[#9C9C9C] lg:text-[18px] ">
+            <h1 className="lg:text-3xl text-xl font-dm-sans tracking-tight">
+              Pioneer Regis<sup>®</sup> Labs
+            </h1>
+            <p className="text-[#9C9C9C] lg:text-sm">
               The must have essential software to run operations in a trusted
               clinic. <br />
               From your local general clinic to super speciality clinics.

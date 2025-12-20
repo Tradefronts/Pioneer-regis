@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import Image from "next/image";
 import Logo from "../../public/images/logo/Logo.png";
@@ -15,7 +15,16 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="lg:relative lg:px-12 px-4 lg:py-8 py-2 w-full flex items-center justify-between border-dashed border-b-2 border-[#D6D6D6]">
+      <nav
+        className="lg:relative lg:px-12 px-4 lg:py-8 py-2 w-full flex items-center justify-between border-b border-transparent"
+        style={{
+          borderImage: `repeating-linear-gradient(
+      to right,
+      #D6D6D6 0 8px,
+      transparent 8px 20px
+    ) 1`,
+        }}
+      >
         <div className="lg:w-24 w-14">
           <div className="lg:absolute lg:top-10 top-12">
             <Image src={Logo} alt="logo" height={90} width={90} />
@@ -40,7 +49,7 @@ const Navbar = () => {
             />
           )}
 
-          <ul className=" flex md:flex-row flex-col items-center justify-center gap-3">
+          <ul className=" flex md:flex-row flex-col items-center justify-center gap-3 lg:gap-10 lg:text-xs text-neutral-700">
             <li>
               <Link
                 href="/"
