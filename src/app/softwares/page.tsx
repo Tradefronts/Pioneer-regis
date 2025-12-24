@@ -10,13 +10,13 @@ const Software = () => {
   return (
     <div>
       <div className=" w-full md:min-h-[367px] py-10  lg:px-14 md:px-10 px-5 flex flex-col justify-end">
-        <div className="flex md:flex-row flex-col justify-between md:gap-8 lg:pb-0 md:pb-3 pb-0">
+        <div className="flex md:flex-row flex-col justify-between md:gap-8  lg:pb-5 md:pb-3 pb-0">
           <div className="flex-1 md:w-[50%] w-full flex items-start ">
             <div className="md:space-y-5 space-y-3">
               <h1 className="sm:text-2xl md:text-3xl text-xl font-medium tracking-tight">
                 Pioneer Regis<sup>®</sup> Labs
               </h1>
-              <p className="text-[#9C9C9C] md:text-base text-xs">
+              <p className="text-[#9C9C9C] lg:text-base md:text-sm text-xs">
                 The must have essential software to run operations in a trusted
                 clinic. <br className="xl:block hidden" />
                 From your local general clinic to super speciality clinics.
@@ -24,9 +24,9 @@ const Software = () => {
             </div>
           </div>
 
-          <div className="md:w-[50%] w-full md:pb-0 md:py-0 py-5  xl:pr-2">
+          <div className="md:w-[50%] w-full md:pb-0 md:py-0 py-5  xl:pr-2 ">
             <div className="flex xl:justify-center xl:items-center relative ">
-              <div className="relative xl:h-[160px] xl:w-[250px] md:h-[130px] md:w-[220px] w-full  h-[160px] rounded-lg z-10 lg:left-8 xl:left-0 left-0">
+              <div className="relative xl:h-[160px] xl:w-[250px] md:h-[130px] md:w-[220px] w-full sm:h-[210px]  h-[160px] rounded-lg z-10 lg:left-8 xl:left-0 left-0">
                 <Image
                   src={images.softwareImg}
                   alt="heroimage"
@@ -35,7 +35,7 @@ const Software = () => {
                 />
               </div>
 
-              <div className="md:block hidden  xl:h-[160px] xl:w-[250px] h-[130px] w-[200px] bg-gray-200 rounded-lg absolute xl:left-1/2  right-0 bottom-1/2  "></div>
+              <div className="md:block hidden  xl:h-[160px] xl:w-[250px] h-[130px] w-[200px] bg-gray-200 rounded-lg absolute xl:left-1/2 lg:left-44 right-0 bottom-1/2  "></div>
             </div>
           </div>
         </div>
