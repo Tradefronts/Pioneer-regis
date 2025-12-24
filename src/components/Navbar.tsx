@@ -8,24 +8,32 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoCloseOutline } from "react-icons/io5";
+import Separator from "./Separator";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  const nav_Items = [
+    { label: "Home", href: "/" },
+    { label: "Softwares", href: "/softwares" },
+    { label: "Tutorials", href: "/tutorials" },
+    { label: "Support", href: "/support" },
+  ];
+
   return (
     <div>
       <nav
-        className="lg:relative lg:px-12 px-4 lg:py-8 py-2 w-full flex items-center justify-between border-b border-transparent"
-        style={{
-          borderImage: `repeating-linear-gradient(
-      to right,
-      #D6D6D6 0 8px,
-      transparent 8px 20px
-    ) 1`,
-        }}
+        className="font-medium font-dm-sans lg:relative lg:px-14 md:px-10 px-5 lg:py-8 py-3 w-full flex items-center justify-between  "
+    //     style={{
+    //       borderImage: `repeating-linear-gradient(
+    //   to right,
+    //   #D6D6D6 0 8px,
+    //   transparent 8px 20px
+    // ) 1`,
+    //     }}
       >
-        <div className="lg:w-24 w-14">
+        <div className="lg:w-24 w-14 z-10">
           <div className="lg:absolute lg:top-10 top-12">
             <Image src={Logo} alt="logo" height={90} width={90} />
           </div>
@@ -37,9 +45,9 @@ const Navbar = () => {
               ? "translate-x-0 overflow-hidden"
               : "translate-x-full lg:translate-x-0 overflow-auto"
           } flex lg:flex-row flex-col bg-white lg:bg-transparent lg:w-auto w-full fixed 
-             lg:relative inset-0 lg:inset-auto items-center lg:h-auto h-screen z-40 
+             lg:relative inset-0 lg:inset-auto items-center lg:h-auto h-screen
              justify-center lg:gap-[58px] gap-[20px] transition-transform lg:transition-none 
-             duration-500 ease-linear`}
+             duration-300 ease-linear font-medium z-50`}
         >
           {isOpen && (
             <IoCloseOutline
@@ -49,50 +57,49 @@ const Navbar = () => {
             />
           )}
 
-          <ul className=" flex md:flex-row flex-col items-center justify-center gap-3 lg:gap-10 lg:text-xs text-neutral-700">
-            <li>
-              <Link
-                href="/"
-                className={
-                  pathname === "/" ? "underline underline-offset-6" : ""
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/softwares"
-                className={
-                  pathname === "/softwares"
-                    ? "underline underline-offset-6"
-                    : ""
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                Softwares
-              </Link>
-            </li>
-            <li>Tutorials</li>
-            <li>Support</li>
+          <ul className="  flex lg:flex-row flex-col items-center justify-center gap-3 lg:gap-10 lg:text-xs text-neutral-700">
+            {nav_Items.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={
+                    pathname === item.href
+                      ? "underline decoration-[2px] underline-offset-6 decoration-[#D9D9D9]"
+                      : ""
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
             <li className="mt-8">
-              <Button
+              {/* <Button
                 name="Get Started"
                 bgColor="#3B3B3B"
                 textColor="#FFFFFF"
                 border="#E2E2E2"
                 isShow="lg:hidden block"
+              /> */}
+              <Button
+                name="Get Started"
+                variant="dark"
+                isShow="block lg:hidden"
               />
             </li>
           </ul>
         </div>
 
-        <Button
+        {/* <Button
           name="Get Started"
           bgColor="#3B3B3B"
           textColor="#FFFFFF"
           border="#E2E2E2"
+          isShow="lg:block hidden"
+        /> */}
+        <Button
+          name="Get Started"
+          variant="dark"
           isShow="lg:block hidden"
         />
 
@@ -106,6 +113,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
+      <Separator/>
     </div>
   );
 };

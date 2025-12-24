@@ -3,23 +3,24 @@ import Image from "next/image";
 import images, { homeContent } from "../config/images";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Bottom from "@/components/Bottom";
+import Separator from "@/components/Separator";
 
 export default function Home() {
   return (
     <div className="">
       {/* HERO SECTION */}
       <div
-        className="w-full px-4 sm:px-8 md:px-12 pb-10 border-b border-transparent"
-        style={{
-          borderImage: `repeating-linear-gradient(
-      to right,
-      #D6D6D6 0 8px,
-      transparent 8px 20px
-    ) 1`,
-        }}
+        className="w-full px-4 sm:px-8 md:px-12 pb-10"
+    //     style={{
+    //       borderImage: `repeating-linear-gradient(
+    //   to right,
+    //   #D6D6D6 0 8px,
+    //   transparent 8px 20px
+    // ) 1`,
+    //     }}
       >
-        <div className="pt-16 sm:pt-24 md:pt-32">
-          <div className="sm:text-2xl md:text-3xl space-y-3 font-dm-sans tracking-tight">
+        <div className="pt-16 sm:pt-24 md:pt-32 ">
+          <div className="sm:text-2xl md:text-3xl space-y-3 font-dm-sans tracking-tight ">
             <h1>Softwares to power mission critical tasks.</h1>
             <h1>Used by over 1,000 professionals across India.</h1>
           </div>
@@ -53,6 +54,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <Separator/>
       <div
         className="w-full flex flex-col lg:flex-row px-4 md:px-12 py-10 border-b border-transparent"
         style={{
@@ -84,6 +86,7 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <Separator/>
       <Bottom
         heading="Flagship Software"
         subHeading="Pioneer® Connected Clinic ™"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -20,19 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} xl:px-26 md:px-16 px-4`}>
+      <body className={`${dmSans.variable} `}>
         <div
-          className="border-x border-transparent"
+          className="border-x border-transparent w-[85%] mx-auto"
           style={{
             borderImage: `repeating-linear-gradient(
       to bottom,
-      #D6D6D6 0 6px,
+      #D6D6D6 0 8px,
       transparent 6px 14px
     ) 1`,
           }}
         >
           <Navbar />
-          {children}
+          <main className="font-dm-sans">{children}</main>
+          {/* <Footer/> */}
         </div>
       </body>
     </html>

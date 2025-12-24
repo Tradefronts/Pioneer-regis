@@ -1,6 +1,7 @@
 import React from "react";
 import images from "../config/images";
 import Image from "next/image";
+import Separator from "./Separator";
 
 type BottomProps={
   heading:string,
@@ -9,7 +10,8 @@ type BottomProps={
 
 const Bottom = ({ heading, subHeading }: BottomProps) => {
   return (
-    <div className="lg:px-12 px-6 lg:py-10  border-b-2 border-dashed border-gray-200 ">
+    <>
+    <div className="lg:px-12 px-6 lg:py-10 ">
       <div className="py-10">
         <div className="border-[#D9D9D9] border-2 rounded-3xl w-[200px] text-center mb-3 py-1">
           {heading}
@@ -32,6 +34,8 @@ const Bottom = ({ heading, subHeading }: BottomProps) => {
         />
       </div>
     </div>
+    <Separator/>
+    </>
   );
 };
 
