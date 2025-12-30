@@ -1,6 +1,6 @@
 "use client";
 
-import  { useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
 import Image from "next/image";
 import Logo from "../../public/images/logo/Logo.png";
@@ -23,9 +23,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav
-        className="font-medium font-dm-sans lg:relative lg:px-14 md:px-10 px-5 lg:py-8 py-3 w-full flex items-center justify-between">
-        <div className="lg:w-24 w-14 z-10">
+      <nav className="font-medium font-dm-sans lg:relative lg:px-14 md:px-10 px-5 lg:py-7 py-3 w-full flex items-center justify-between">
+        <div className="lg:w-24 w-14 z-10 ">
           <div className="lg:absolute lg:top-10 top-12">
             <Image src={Logo} alt="logo" height={90} width={90} />
           </div>
@@ -49,14 +48,14 @@ const Navbar = () => {
             />
           )}
 
-          <ul className="  flex lg:flex-row flex-col items-center justify-center gap-3 lg:gap-10 lg:text-xs text-neutral-700">
+          <ul className="  flex lg:flex-row flex-col items-center justify-between gap-3 xl:gap-12 lg:gap-5 xl:text-sm lg:text-xs text-sm text-neutral-700">
             {nav_Items.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   className={
                     pathname === item.href
-                      ? "underline decoration-[2px] underline-offset-6 decoration-[#D9D9D9]"
+                      ? "underline decoration-[2px] underline-offset-4 decoration-[#D9D9D9]"
                       : ""
                   }
                   onClick={() => setIsOpen(false)}
@@ -65,21 +64,16 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="mt-8">
-             
+            <li className="block lg:hidden mt-8">
               <Button
                 name="Get Started"
                 variant="dark"
-                isShow="block lg:hidden"
+                // isShow="block lg:hidden"
               />
             </li>
           </ul>
         </div>
-        <Button
-          name="Get Started"
-          variant="dark"
-          isShow="lg:block hidden"
-        />
+        <Button name="Get Started" variant="dark" isShow="lg:block hidden" />
 
         <div className="lg:hidden flex items-center z-50">
           {!isOpen && (
@@ -91,7 +85,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-      <Separator/>
+      <Separator />
     </div>
   );
 };

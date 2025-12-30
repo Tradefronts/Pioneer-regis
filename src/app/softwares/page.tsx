@@ -10,10 +10,10 @@ const Software = () => {
   return (
     <div>
       <div className=" w-full md:min-h-[367px] py-10  lg:px-14 md:px-10 px-5 flex flex-col justify-end">
-        <div className="flex md:flex-row flex-col justify-between md:gap-8  lg:pb-5 md:pb-3 pb-0">
+        <div className="flex md:flex-row flex-col justify-between md:gap-8 xl:pb-0 lg:pb-5 md:pb-3 pb-0 ">
           <div className="flex-1 md:w-[50%] w-full flex items-start ">
             <div className="md:space-y-5 space-y-3">
-              <h1 className="sm:text-2xl md:text-3xl text-xl font-medium tracking-tight">
+              <h1 className="sm:text-2xl md:text-3xl text-xl font-medium font-dm-sans tracking-tight">
                 Pioneer Regis<sup>®</sup> Labs
               </h1>
               <p className="text-[#9C9C9C] lg:text-base md:text-sm text-xs">
@@ -59,10 +59,11 @@ const Software = () => {
       </div>
       <Separator />
 
+      {/* Screenshots */}
       <Section className="md:space-y-12 space-y-10">
-        <SectionTitle title="Screenshots" />
+        <SectionTitle title="Screenshots" size="lg" />
         <div className="space-y-5">
-          <div className=" w-full my-2 p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[67%_33%] gap-5">
+          <div className=" w-full my-2  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[67%_33%] gap-5">
             {homeContent.heroImages.map((item, index) => (
               <div
                 key={`hero-image-${index + 1}`}
@@ -92,9 +93,9 @@ const Software = () => {
           </div>
         </div>
       </Section>
-
       <Separator />
 
+      {/* Synopsis */}
       <Section className="w-full flex lg:flex-row flex-col justify-between items-start lg:space-y-12 space-y-10">
         <SectionTitle title="Synopsis" size="sm" />
         <div className="lg:w-[40%] w-full lg:text-[38px] text-[30px] space-y-3 ">
@@ -106,18 +107,20 @@ const Software = () => {
               sed, suscipit enim.
             </span>
           </p>
-          <p className="text-sm sm:text-base md:text-[18px] text-[#9C9C9C]">
+          {/* <p className="text-sm sm:text-base md:text-[18px] text-[#9C9C9C]"> */}
+          <p className="text-base text-[#9C9C9C]">
+
             Nulla facilisi. Fusce sit amet arcu nec enim fringilla lacinia. Ut
             elit sapien, porttitor eget diam et, dictum sagittis urna. Fusce sit
             amet mi pellentesque, volutpat eros a, consectetur neque.
           </p>
         </div>
       </Section>
-
       <Separator />
-
+      
+      {/* Training Resources */}
       <Section className="lg:space-y-12 space-y-10">
-        <SectionTitle title="Training Resources" size="lg" />
+        <SectionTitle title="Training Resources" size="xl" />
         <div className="w-full flex lg:flex-row flex-col lg:items-center gap-5 ">
           {images.bottom.map((img, inx) => (
             <div
@@ -134,18 +137,18 @@ const Software = () => {
           ))}
         </div>
       </Section>
-
       <Separator />
 
+      {/* Certification */}
       <Section className="lg:space-y-12 space-y-10 flex flex-col items-center justify-center">
         <SectionTitle title="Certification" align="center" />
-        <div className=" flex flex-col items-center justify-center gap-2">
-          <div className="lg:text-[38px] md:text-3xl text-[13px]  flex flex-col items-center">
+        <div className=" flex flex-col items-center justify-center gap-8">
+          <div className="sm:text-2xl  md:text-3xl font-medium  flex flex-col items-center gap-2 tracking-tight">
             <h6>Become a</h6>
             <h6>Certified Connected Clinic Operator </h6>
           </div>
           <div className=" flex items-center justify-center">
-            <p className="text-[#9C9C9C] lg:text-[18px] md:text-sm text-xs text-center">
+            <p className="text-[#9C9C9C] md:text-base text-xs text-center">
               Nulla facilisi. Fusce sit amet arcu nec enim fringilla lacinia. Ut
               elit <br className="md:block hidden" />
               sapien, porttitor eget diam et, dictum sagittis urna. Fusce sit

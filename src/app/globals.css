@@ -23,24 +23,23 @@
 body {
   background: var(--background);
   /* color: var(--foreground); */
-  font-family: Arial, Helvetica, sans-serif;
-}
-body {
-  background: linear-gradient(
-    190deg,
-    #f1f1f1 0%,
-    #aca9fc59 40%,
-    #f1f1f1 50%,
-    #aca9fc59 100%
-  );
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: var(--font-dm-sans), sans-serif;
+
 }
 
 body {
-  background: linear-gradient(
-    190deg,
-    #f1f1f1 0%,
-    #aca9fc59 40%,
-    #f1f1f1 50%,
-    #aca9fc68 100%
-  );
+  background: linear-gradient(190deg,
+      #f1f1f1 0%,
+      #aca9fc59 40%,
+      #f1f1f1 50%,
+      #aca9fc59 100%);
+}
+
+body {
+  background: linear-gradient(190deg,
+      #f1f1f1 0%,
+      #aca9fc59 40%,
+      #f1f1f1 50%,
+      #aca9fc68 100%);
 }

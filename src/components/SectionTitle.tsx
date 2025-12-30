@@ -1,4 +1,4 @@
-type Width = "sm" | "md" | "lg"
+type Width = "sm" | "md" | "lg"|"xl"
 
 type SectionProps = {
     title: string;
@@ -9,7 +9,8 @@ type SectionProps = {
 const sizeClasses: Record<Width, string> = {
     sm: "w-24",
     md: "w-28",
-    lg: "w-40",
+    lg:"w-32",
+    xl: "w-40",
 };
 
 const SectionTitle = ({
@@ -22,8 +23,8 @@ const SectionTitle = ({
             className={`
          ${sizeClasses[size]}
         border-2 border-[#D9D9D9]
-        rounded-full px-3 py-1
-        text-xs font-medium
+        rounded-full px-3 py-1.5
+        text-xs font-medium tracking-tight
         whitespace-nowrap ${align==="center"?"text-center":"text-end"}
       `}>
             {title}

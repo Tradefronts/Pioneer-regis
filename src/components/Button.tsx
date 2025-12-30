@@ -25,7 +25,8 @@ const Button = ({
         ${isShow}
         ${variants[variant]}
         ${className}
-        rounded-full lg:px-10 px-7  lg:py-2 md:py-1 py-1.5
+        ${name === "Get Started" ? "lg:px-10 px-7  py-2" :"lg:px-10 px-7  lg:py-2 md:py-1 py-1.5"}
+        rounded-full 
         border-2 text-center
         xl:text-sm lg:text-sm text-xs
         hover:opacity-90 transition
