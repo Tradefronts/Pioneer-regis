@@ -70,7 +70,6 @@ export default function Home() {
         </div>
       </div>
       <Separator />
-     {/* Bottom card section in home page*/}
       <div>
         {connectedAccountsSections.map((section) => (
           <div
